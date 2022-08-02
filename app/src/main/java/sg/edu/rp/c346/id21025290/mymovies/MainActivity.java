@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
         btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, String.valueOf(spnRating.getSelectedItemPosition()),
-                        Toast.LENGTH_SHORT).show();
 
                 if (spnRating.getSelectedItemPosition() != 0) {
                     String title = etTitle.getText().toString();
@@ -58,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
                     if (inserted_id != -1) {
                         Toast.makeText(MainActivity.this, "Insert successful",
                                 Toast.LENGTH_SHORT).show();
+                        etTitle.setText("");
+                        etGenre.setText("");
+                        etYear.setText("");
+                        spnRating.setSelection(0);
                     } else {
                         Toast.makeText(MainActivity.this, "Insert unsuccessful",
                                 Toast.LENGTH_SHORT).show();
