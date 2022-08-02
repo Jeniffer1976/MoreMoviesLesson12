@@ -103,4 +103,5 @@ public class ListActivity extends AppCompatActivity {
         aaRating.notifyDataSetChanged();
     }
 }
+
 //test
